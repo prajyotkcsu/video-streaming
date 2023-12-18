@@ -26,6 +26,7 @@ public class AssetUploadController {
     private RestTemplate restTemplate;
     @GetMapping("/")
     public String greet(){
+        log.info("Into the void again");
         return "Hello PK updated";
     }
     @GetMapping("/publish/asset-upload")
