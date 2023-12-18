@@ -1,0 +1,323 @@
+2023-12-18T02:13:38.225-06:00  INFO 24600 --- [main] o.l.A.A.AssetUploadApplicationTests      : Starting AssetUploadApplicationTests using Java 20.0.1 with PID 24600 (started by Prajyot Karnik in C:\orb\AssetUpload\AssetUpload)
+2023-12-18T02:13:38.228-06:00  INFO 24600 --- [main] o.l.A.A.AssetUploadApplicationTests      : No active profile set, falling back to 1 default profile: "default"
+2023-12-18T02:13:39.755-06:00  INFO 24600 --- [main] o.l.A.A.AssetUploadApplicationTests      : Started AssetUploadApplicationTests in 1.914 seconds (process running for 3.283)
+2023-12-18T02:38:57.686-06:00  INFO 16708 --- [main] o.l.A.A.AssetUploadApplicationTests      : Starting AssetUploadApplicationTests using Java 20.0.1 with PID 16708 (started by Prajyot Karnik in C:\orb\AssetUpload\AssetUpload)
+2023-12-18T02:38:57.688-06:00  INFO 16708 --- [main] o.l.A.A.AssetUploadApplicationTests      : No active profile set, falling back to 1 default profile: "default"
+2023-12-18T02:38:59.042-06:00  INFO 16708 --- [main] o.l.A.A.AssetUploadApplicationTests      : Started AssetUploadApplicationTests in 1.723 seconds (process running for 2.841)
+2023-12-18T10:17:49.914-06:00  INFO 23076 --- [main] o.l.A.A.AssetUploadApplication           : Starting AssetUploadApplication using Java 20.0.1 with PID 23076 (C:\orb\AssetUpload\AssetUpload\target\classes started by Prajyot Karnik in C:\orb\AssetUpload\AssetUpload)
+2023-12-18T10:17:49.923-06:00  INFO 23076 --- [main] o.l.A.A.AssetUploadApplication           : No active profile set, falling back to 1 default profile: "default"
+2023-12-18T10:17:51.446-06:00  INFO 23076 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2023-12-18T10:17:51.456-06:00  INFO 23076 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-18T10:17:51.456-06:00  INFO 23076 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-18T10:17:51.535-06:00  INFO 23076 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-18T10:17:51.535-06:00  INFO 23076 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1526 ms
+2023-12-18T10:17:51.598-06:00  WARN 23076 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'assetUploadController': Unsatisfied dependency expressed through field 'restTemplate': No qualifying bean of type 'org.springframework.web.client.RestTemplate' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2023-12-18T10:17:51.606-06:00  INFO 23076 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-12-18T10:17:51.628-06:00  INFO 23076 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-12-18T10:17:51.657-06:00 ERROR 23076 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field restTemplate in orb.livepeer.AssetUploadListner.AssetUpload.controller.AssetUploadController required a bean of type 'org.springframework.web.client.RestTemplate' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.web.client.RestTemplate' in your configuration.
+
+2023-12-18T10:21:59.423-06:00  INFO 23932 --- [main] o.l.A.A.AssetUploadApplication           : Starting AssetUploadApplication using Java 20.0.1 with PID 23932 (C:\orb\AssetUpload\AssetUpload\target\classes started by Prajyot Karnik in C:\orb\AssetUpload\AssetUpload)
+2023-12-18T10:21:59.427-06:00  INFO 23932 --- [main] o.l.A.A.AssetUploadApplication           : No active profile set, falling back to 1 default profile: "default"
+2023-12-18T10:22:00.914-06:00  INFO 23932 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2023-12-18T10:22:00.925-06:00  INFO 23932 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-18T10:22:00.926-06:00  INFO 23932 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-18T10:22:01.008-06:00  INFO 23932 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-18T10:22:01.009-06:00  INFO 23932 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1490 ms
+2023-12-18T10:22:01.523-06:00  INFO 23932 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2023-12-18T10:22:01.531-06:00  INFO 23932 --- [main] o.l.A.A.AssetUploadApplication           : Started AssetUploadApplication in 2.688 seconds (process running for 3.16)
+2023-12-18T10:22:14.859-06:00  INFO 23932 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-18T10:22:14.860-06:00  INFO 23932 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-12-18T10:22:14.860-06:00  INFO 23932 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-12-18T10:31:57.832-06:00  INFO 29764 --- [main] o.l.A.A.AssetUploadApplication           : Starting AssetUploadApplication using Java 20.0.1 with PID 29764 (C:\orb\AssetUpload\AssetUpload\target\classes started by Prajyot Karnik in C:\orb\AssetUpload\AssetUpload)
+2023-12-18T10:31:57.840-06:00  INFO 29764 --- [main] o.l.A.A.AssetUploadApplication           : No active profile set, falling back to 1 default profile: "default"
+2023-12-18T10:32:03.663-06:00  INFO 29764 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2023-12-18T10:32:03.679-06:00  INFO 29764 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-18T10:32:03.680-06:00  INFO 29764 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-18T10:32:03.770-06:00  INFO 29764 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-18T10:32:03.770-06:00  INFO 29764 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5446 ms
+2023-12-18T10:32:04.738-06:00  INFO 29764 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2023-12-18T10:32:04.770-06:00  INFO 29764 --- [main] o.l.A.A.AssetUploadApplication           : Started AssetUploadApplication in 8.107 seconds (process running for 9.759)
+2023-12-18T10:35:51.220-06:00  INFO 29764 --- [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-18T10:35:51.221-06:00  INFO 29764 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-12-18T10:35:51.222-06:00  INFO 29764 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-12-18T10:35:51.307-06:00  INFO 29764 --- [http-nio-8080-exec-3] o.l.A.A.c.AssetUploadController          : Received asset notification:{"id":"e9964f14-1190-4180-a3a5-d7e91094497b","webhookId":"0206f5cf-cbbb-4ca8-8f88-a3c45bf8a1b2","createdAt":1702889530778,"timestamp":1702889531598,"event":"asset.created","payload":{"asset":{"id":"09ee192e-20d9-480e-a3fd-feba453554fa","snapshot":{"id":"09ee192e-20d9-480e-a3fd-feba453554fa","playbackId":"09ee1iihioqf4zon","userId":"daf6bcd3-ac4d-4af2-b2cc-1ab49a862f28","createdAt":1702889530778,"status":{"phase":"uploading","updatedAt":1702889530778},"name":"1 Minute Timer Lofi.mp4","source":{"type":"directUpload"},"objectStoreId":"76b92dd4-11e1-477c-96c3-cae8d7296512"}}}} 
+2023-12-18T10:36:23.509-06:00  INFO 29764 --- [http-nio-8080-exec-3] o.l.A.A.c.AssetUploadController          : PlaybackId:09ee1iihioqf4zon 
+2023-12-18T10:36:59.412-06:00  INFO 27464 --- [main] o.l.A.A.AssetUploadApplication           : Starting AssetUploadApplication using Java 20.0.1 with PID 27464 (C:\orb\AssetUpload\AssetUpload\target\classes started by Prajyot Karnik in C:\orb\AssetUpload\AssetUpload)
+2023-12-18T10:36:59.416-06:00  INFO 27464 --- [main] o.l.A.A.AssetUploadApplication           : No active profile set, falling back to 1 default profile: "default"
+2023-12-18T10:37:01.409-06:00  INFO 27464 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2023-12-18T10:37:01.422-06:00  INFO 27464 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-18T10:37:01.422-06:00  INFO 27464 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-18T10:37:01.507-06:00  INFO 27464 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-18T10:37:01.508-06:00  INFO 27464 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1965 ms
+2023-12-18T10:37:02.023-06:00  INFO 27464 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2023-12-18T10:37:02.031-06:00  INFO 27464 --- [main] o.l.A.A.AssetUploadApplication           : Started AssetUploadApplication in 3.527 seconds (process running for 4.396)
+2023-12-18T10:37:12.228-06:00  INFO 27464 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-18T10:37:12.229-06:00  INFO 27464 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-12-18T10:37:12.230-06:00  INFO 27464 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-12-18T10:37:12.279-06:00  INFO 27464 --- [http-nio-8080-exec-1] o.l.A.A.c.AssetUploadController          : Received asset notification: {"id":"dbee0e42-688a-4b31-b572-a3d9da443b04","webhookId":"0206f5cf-cbbb-4ca8-8f88-a3c45bf8a1b2","createdAt":1702889596336,"timestamp":1702889597640,"event":"asset.ready","payload":{"id":"09ee192e-20d9-480e-a3fd-feba453554fa","snapshot":{}}} 
+2023-12-18T10:37:36.666-06:00 ERROR 27464 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+
+com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "id" (class orb.livepeer.AssetUploadListner.AssetUpload.controller.Payload), not marked as ignorable (one known property: "asset"])
+ at [Source: (String)" {"id":"dbee0e42-688a-4b31-b572-a3d9da443b04","webhookId":"0206f5cf-cbbb-4ca8-8f88-a3c45bf8a1b2","createdAt":1702889596336,"timestamp":1702889597640,"event":"asset.ready","payload":{"id":"09ee192e-20d9-480e-a3fd-feba453554fa","snapshot":{}}}"; line: 1, column: 189] (through reference chain: orb.livepeer.AssetUploadListner.AssetUpload.controller.WebhookEvent["payload"]->orb.livepeer.AssetUploadListner.AssetUpload.controller.Payload["id"])
+	at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61) ~[jackson-databind-2.15.3.jar:2.15.3]
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:1138) ~[jackson-databind-2.15.3.jar:2.15.3]
+	at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:2224) ~[jackson-databind-2.15.3.jar:2.15.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperty(BeanDeserializerBase.java:1709) ~[jackson-databind-2.15.3.jar:2.15.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownVanilla(BeanDeserializerBase.java:1687) ~[jackson-databind-2.15.3.jar:2.15.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:320) ~[jackson-databind-2.15.3.jar:2.15.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:177) ~[jackson-databind-2.15.3.jar:2.15.3]
+	at com.fasterxml.jackson.databind.deser.impl.MethodProperty.deserializeAndSet(MethodProperty.java:129) ~[jackson-databind-2.15.3.jar:2.15.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:314) ~[jackson-databind-2.15.3.jar:2.15.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:177) ~[jackson-databind-2.15.3.jar:2.15.3]
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:323) ~[jackson-databind-2.15.3.jar:2.15.3]
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4825) ~[jackson-databind-2.15.3.jar:2.15.3]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3772) ~[jackson-databind-2.15.3.jar:2.15.3]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3740) ~[jackson-databind-2.15.3.jar:2.15.3]
+	at orb.livepeer.AssetUploadListner.AssetUpload.controller.JsonParserWithObjectMapper.extractEventType(JsonParserWithObjectMapper.java:67) ~[classes/:na]
+	at orb.livepeer.AssetUploadListner.AssetUpload.controller.AssetUploadController.assetReadyNotification(AssetUploadController.java:38) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:254) ~[spring-web-6.1.1.jar:6.1.1]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:182) ~[spring-web-6.1.1.jar:6.1.1]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.1.jar:6.1.1]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:917) ~[spring-webmvc-6.1.1.jar:6.1.1]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:829) ~[spring-webmvc-6.1.1.jar:6.1.1]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.1.jar:6.1.1]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.1.jar:6.1.1]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.1.jar:6.1.1]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.1.jar:6.1.1]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.1.1.jar:6.1.1]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.16.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.1.jar:6.1.1]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.16.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.1.jar:6.1.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.1.jar:6.1.1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.1.jar:6.1.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.1.jar:6.1.1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.1.jar:6.1.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.1.jar:6.1.1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at java.base/java.lang.Thread.run(Thread.java:1623) ~[na:na]
+
+2023-12-18T10:38:20.319-06:00  INFO 16280 --- [main] o.l.A.A.AssetUploadApplication           : Starting AssetUploadApplication using Java 20.0.1 with PID 16280 (C:\orb\AssetUpload\AssetUpload\target\classes started by Prajyot Karnik in C:\orb\AssetUpload\AssetUpload)
+2023-12-18T10:38:20.322-06:00  INFO 16280 --- [main] o.l.A.A.AssetUploadApplication           : No active profile set, falling back to 1 default profile: "default"
+2023-12-18T10:38:21.737-06:00  INFO 16280 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2023-12-18T10:38:21.747-06:00  INFO 16280 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-18T10:38:21.747-06:00  INFO 16280 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-18T10:38:21.827-06:00  INFO 16280 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-18T10:38:21.828-06:00  INFO 16280 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1428 ms
+2023-12-18T10:38:22.383-06:00  INFO 16280 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2023-12-18T10:38:22.391-06:00  INFO 16280 --- [main] o.l.A.A.AssetUploadApplication           : Started AssetUploadApplication in 2.733 seconds (process running for 3.404)
+2023-12-18T10:38:25.060-06:00  INFO 16280 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-18T10:38:25.060-06:00  INFO 16280 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-12-18T10:38:25.061-06:00  INFO 16280 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-12-18T10:38:25.116-06:00  INFO 16280 --- [http-nio-8080-exec-2] o.l.A.A.c.AssetUploadController          : Received asset notification: {"id":"dbee0e42-688a-4b31-b572-a3d9da443b04","webhookId":"0206f5cf-cbbb-4ca8-8f88-a3c45bf8a1b2","createdAt":1702889596336,"timestamp":1702889597640,"event":"asset.ready","payload":{"id":"09ee192e-20d9-480e-a3fd-feba453554fa","snapshot":{}}} 
+2023-12-18T10:38:41.110-06:00 ERROR 16280 --- [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+
+com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "id" (class orb.livepeer.AssetUploadListner.AssetUpload.controller.Payload), not marked as ignorable (one known property: "asset"])
+ at [Source: (String)" {"id":"dbee0e42-688a-4b31-b572-a3d9da443b04","webhookId":"0206f5cf-cbbb-4ca8-8f88-a3c45bf8a1b2","createdAt":1702889596336,"timestamp":1702889597640,"event":"asset.ready","payload":{"id":"09ee192e-20d9-480e-a3fd-feba453554fa","snapshot":{}}}"; line: 1, column: 189] (through reference chain: orb.livepeer.AssetUploadListner.AssetUpload.controller.WebhookEvent["payload"]->orb.livepeer.AssetUploadListner.AssetUpload.controller.Payload["id"])
+	at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61) ~[jackson-databind-2.15.3.jar:2.15.3]
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:1138) ~[jackson-databind-2.15.3.jar:2.15.3]
+	at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:2224) ~[jackson-databind-2.15.3.jar:2.15.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperty(BeanDeserializerBase.java:1709) ~[jackson-databind-2.15.3.jar:2.15.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownVanilla(BeanDeserializerBase.java:1687) ~[jackson-databind-2.15.3.jar:2.15.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:320) ~[jackson-databind-2.15.3.jar:2.15.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:177) ~[jackson-databind-2.15.3.jar:2.15.3]
+	at com.fasterxml.jackson.databind.deser.impl.MethodProperty.deserializeAndSet(MethodProperty.java:129) ~[jackson-databind-2.15.3.jar:2.15.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:314) ~[jackson-databind-2.15.3.jar:2.15.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:177) ~[jackson-databind-2.15.3.jar:2.15.3]
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:323) ~[jackson-databind-2.15.3.jar:2.15.3]
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4825) ~[jackson-databind-2.15.3.jar:2.15.3]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3772) ~[jackson-databind-2.15.3.jar:2.15.3]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3740) ~[jackson-databind-2.15.3.jar:2.15.3]
+	at orb.livepeer.AssetUploadListner.AssetUpload.controller.JsonParserWithObjectMapper.extractEventType(JsonParserWithObjectMapper.java:67) ~[classes/:na]
+	at orb.livepeer.AssetUploadListner.AssetUpload.controller.AssetUploadController.assetReadyNotification(AssetUploadController.java:38) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:254) ~[spring-web-6.1.1.jar:6.1.1]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:182) ~[spring-web-6.1.1.jar:6.1.1]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.1.jar:6.1.1]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:917) ~[spring-webmvc-6.1.1.jar:6.1.1]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:829) ~[spring-webmvc-6.1.1.jar:6.1.1]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.1.jar:6.1.1]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.1.jar:6.1.1]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.1.jar:6.1.1]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.1.jar:6.1.1]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.1.1.jar:6.1.1]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.16.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.1.jar:6.1.1]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.16.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.1.jar:6.1.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.1.jar:6.1.1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.1.jar:6.1.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.1.jar:6.1.1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.1.jar:6.1.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.1.jar:6.1.1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
+	at java.base/java.lang.Thread.run(Thread.java:1623) ~[na:na]
+
+2023-12-18T11:49:48.071-06:00  INFO 31072 --- [main] o.l.A.A.AssetUploadApplication           : Starting AssetUploadApplication using Java 20.0.1 with PID 31072 (C:\orb\AssetUpload\AssetUpload\target\classes started by Prajyot Karnik in C:\orb\AssetUpload\AssetUpload)
+2023-12-18T11:49:48.073-06:00  INFO 31072 --- [main] o.l.A.A.AssetUploadApplication           : No active profile set, falling back to 1 default profile: "default"
+2023-12-18T11:49:49.551-06:00  INFO 31072 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2023-12-18T11:49:49.565-06:00  INFO 31072 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-18T11:49:49.565-06:00  INFO 31072 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-18T11:49:49.652-06:00  INFO 31072 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-18T11:49:49.653-06:00  INFO 31072 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1516 ms
+2023-12-18T11:49:50.204-06:00  INFO 31072 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2023-12-18T11:49:50.214-06:00  INFO 31072 --- [main] o.l.A.A.AssetUploadApplication           : Started AssetUploadApplication in 2.842 seconds (process running for 3.517)
+2023-12-18T11:49:56.448-06:00  INFO 31072 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-18T11:49:56.448-06:00  INFO 31072 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-12-18T11:49:56.449-06:00  INFO 31072 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-12-18T11:49:56.518-06:00  INFO 31072 --- [http-nio-8080-exec-1] o.l.A.A.c.AssetUploadController          : Received asset notification: {"id":"dbee0e42-688a-4b31-b572-a3d9da443b04","webhookId":"0206f5cf-cbbb-4ca8-8f88-a3c45bf8a1b2","createdAt":1702889596336,"timestamp":1702889597640,"event":"asset.ready","payload":{"id":"09ee192e-20d9-480e-a3fd-feba453554fa","snapshot":{}}} 
+2023-12-18T11:54:06.152-06:00  INFO 31072 --- [http-nio-8080-exec-1] o.l.A.A.c.AssetUploadController          : PlaybackId:VideoMetadata(type=vod, meta=Meta(playbackPolicy=null, source=[Source(hrn=MP4, type=html5/video/mp4, url=https://vod-cdn.lp-playback.studio/raw/jxf4iblf6wlsyor6526t4tcmtmqa/catalyst-vod-com/hls/09ee1iihioqf4zon/360p0.mp4, size=2191367, width=640, height=360, bitrate=119245), Source(hrn=HLS (TS), type=html5/application/vnd.apple.mpegurl, url=https://vod-cdn.lp-playback.studio/raw/jxf4iblf6wlsyor6526t4tcmtmqa/catalyst-vod-com/hls/09ee1iihioqf4zon/index.m3u8, size=null, width=null, height=null, bitrate=null), Source(hrn=Thumbnails, type=text/vtt, url=https://vod-cdn.lp-playback.studio/raw/jxf4iblf6wlsyor6526t4tcmtmqa/catalyst-vod-com/hls/09ee1iihioqf4zon/thumbnails/thumbnails.vtt, size=null, width=null, height=null, bitrate=null)])) 
+2023-12-18T11:54:11.711-06:00  INFO 16132 --- [main] o.l.A.A.AssetUploadApplication           : Starting AssetUploadApplication using Java 20.0.1 with PID 16132 (C:\orb\AssetUpload\AssetUpload\target\classes started by Prajyot Karnik in C:\orb\AssetUpload\AssetUpload)
+2023-12-18T11:54:11.714-06:00  INFO 16132 --- [main] o.l.A.A.AssetUploadApplication           : No active profile set, falling back to 1 default profile: "default"
+2023-12-18T11:54:13.061-06:00  INFO 16132 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2023-12-18T11:54:13.073-06:00  INFO 16132 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-18T11:54:13.073-06:00  INFO 16132 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-18T11:54:13.154-06:00  INFO 16132 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-18T11:54:13.155-06:00  INFO 16132 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1367 ms
+2023-12-18T11:54:13.710-06:00  INFO 16132 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2023-12-18T11:54:13.719-06:00  INFO 16132 --- [main] o.l.A.A.AssetUploadApplication           : Started AssetUploadApplication in 2.645 seconds (process running for 3.192)
+2023-12-18T11:54:21.011-06:00  INFO 16132 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-18T11:54:21.011-06:00  INFO 16132 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-12-18T11:54:21.012-06:00  INFO 16132 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-12-18T11:54:21.073-06:00  INFO 16132 --- [http-nio-8080-exec-2] o.l.A.A.c.AssetUploadController          : Received asset notification: {"id":"dbee0e42-688a-4b31-b572-a3d9da443b04","webhookId":"0206f5cf-cbbb-4ca8-8f88-a3c45bf8a1b2","createdAt":1702889596336,"timestamp":1702889597640,"event":"asset.ready","payload":{"id":"09ee192e-20d9-480e-a3fd-feba453554fa","snapshot":{}}} 
+2023-12-18T12:02:43.854-06:00  INFO 16132 --- [http-nio-8080-exec-2] o.l.A.A.c.AssetUploadController          : PlaybackId:VideoMetadata(type=vod, meta=Meta(playbackPolicy=null, source=[Source(hrn=MP4, type=html5/video/mp4, url=https://vod-cdn.lp-playback.studio/raw/jxf4iblf6wlsyor6526t4tcmtmqa/catalyst-vod-com/hls/09ee1iihioqf4zon/360p0.mp4, size=2191367, width=640, height=360, bitrate=119245), Source(hrn=HLS (TS), type=html5/application/vnd.apple.mpegurl, url=https://vod-cdn.lp-playback.studio/raw/jxf4iblf6wlsyor6526t4tcmtmqa/catalyst-vod-com/hls/09ee1iihioqf4zon/index.m3u8, size=null, width=null, height=null, bitrate=null), Source(hrn=Thumbnails, type=text/vtt, url=https://vod-cdn.lp-playback.studio/raw/jxf4iblf6wlsyor6526t4tcmtmqa/catalyst-vod-com/hls/09ee1iihioqf4zon/thumbnails/thumbnails.vtt, size=null, width=null, height=null, bitrate=null)])) 
+2023-12-18T12:03:09.513-06:00  INFO 14704 --- [main] o.l.A.A.AssetUploadApplication           : Starting AssetUploadApplication using Java 20.0.1 with PID 14704 (C:\orb\AssetUpload\AssetUpload\target\classes started by Prajyot Karnik in C:\orb\AssetUpload\AssetUpload)
+2023-12-18T12:03:09.516-06:00  INFO 14704 --- [main] o.l.A.A.AssetUploadApplication           : No active profile set, falling back to 1 default profile: "default"
+2023-12-18T12:03:10.789-06:00  INFO 14704 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2023-12-18T12:03:10.801-06:00  INFO 14704 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-18T12:03:10.801-06:00  INFO 14704 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-18T12:03:10.868-06:00  INFO 14704 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-18T12:03:10.868-06:00  INFO 14704 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1282 ms
+2023-12-18T12:03:11.329-06:00  INFO 14704 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2023-12-18T12:03:11.337-06:00  INFO 14704 --- [main] o.l.A.A.AssetUploadApplication           : Started AssetUploadApplication in 2.382 seconds (process running for 2.826)
+2023-12-18T12:03:16.210-06:00  INFO 14704 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-18T12:03:16.210-06:00  INFO 14704 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-12-18T12:03:16.211-06:00  INFO 14704 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-12-18T12:03:16.255-06:00  INFO 14704 --- [http-nio-8080-exec-1] o.l.A.A.c.AssetUploadController          : Received asset notification: {"id":"dbee0e42-688a-4b31-b572-a3d9da443b04","webhookId":"0206f5cf-cbbb-4ca8-8f88-a3c45bf8a1b2","createdAt":1702889596336,"timestamp":1702889597640,"event":"asset.ready","payload":{"id":"09ee192e-20d9-480e-a3fd-feba453554fa","snapshot":{}}} 
+2023-12-18T12:03:17.106-06:00  INFO 14704 --- [http-nio-8080-exec-1] o.l.A.A.c.AssetUploadController          : videoMetadata: VideoMetadata(type=vod, meta=Meta(playbackPolicy=null, source=[Source(hrn=MP4, type=html5/video/mp4, url=https://vod-cdn.lp-playback.studio/raw/jxf4iblf6wlsyor6526t4tcmtmqa/catalyst-vod-com/hls/09ee1iihioqf4zon/360p0.mp4, size=2191367, width=640, height=360, bitrate=119245), Source(hrn=HLS (TS), type=html5/application/vnd.apple.mpegurl, url=https://vod-cdn.lp-playback.studio/raw/jxf4iblf6wlsyor6526t4tcmtmqa/catalyst-vod-com/hls/09ee1iihioqf4zon/index.m3u8, size=null, width=null, height=null, bitrate=null), Source(hrn=Thumbnails, type=text/vtt, url=https://vod-cdn.lp-playback.studio/raw/jxf4iblf6wlsyor6526t4tcmtmqa/catalyst-vod-com/hls/09ee1iihioqf4zon/thumbnails/thumbnails.vtt, size=null, width=null, height=null, bitrate=null)]))
+2023-12-18T12:03:17.109-06:00  INFO 14704 --- [http-nio-8080-exec-1] o.l.A.A.c.AssetUploadController          : PlaybackId:VideoMetadata(type=vod, meta=Meta(playbackPolicy=null, source=[Source(hrn=MP4, type=html5/video/mp4, url=https://vod-cdn.lp-playback.studio/raw/jxf4iblf6wlsyor6526t4tcmtmqa/catalyst-vod-com/hls/09ee1iihioqf4zon/360p0.mp4, size=2191367, width=640, height=360, bitrate=119245), Source(hrn=HLS (TS), type=html5/application/vnd.apple.mpegurl, url=https://vod-cdn.lp-playback.studio/raw/jxf4iblf6wlsyor6526t4tcmtmqa/catalyst-vod-com/hls/09ee1iihioqf4zon/index.m3u8, size=null, width=null, height=null, bitrate=null), Source(hrn=Thumbnails, type=text/vtt, url=https://vod-cdn.lp-playback.studio/raw/jxf4iblf6wlsyor6526t4tcmtmqa/catalyst-vod-com/hls/09ee1iihioqf4zon/thumbnails/thumbnails.vtt, size=null, width=null, height=null, bitrate=null)])) 
+2023-12-18T12:04:13.513-06:00  INFO 24320 --- [main] o.l.A.A.AssetUploadApplication           : Starting AssetUploadApplication using Java 20.0.1 with PID 24320 (C:\orb\AssetUpload\AssetUpload\target\classes started by Prajyot Karnik in C:\orb\AssetUpload\AssetUpload)
+2023-12-18T12:04:13.517-06:00  INFO 24320 --- [main] o.l.A.A.AssetUploadApplication           : No active profile set, falling back to 1 default profile: "default"
+2023-12-18T12:04:14.735-06:00  INFO 24320 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2023-12-18T12:04:14.744-06:00  INFO 24320 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-18T12:04:14.745-06:00  INFO 24320 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-18T12:04:14.807-06:00  INFO 24320 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-18T12:04:14.807-06:00  INFO 24320 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1229 ms
+2023-12-18T12:04:15.239-06:00  INFO 24320 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2023-12-18T12:04:15.246-06:00  INFO 24320 --- [main] o.l.A.A.AssetUploadApplication           : Started AssetUploadApplication in 2.292 seconds (process running for 2.768)
+2023-12-18T12:04:31.402-06:00  INFO 24320 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-18T12:04:31.403-06:00  INFO 24320 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-12-18T12:04:31.404-06:00  INFO 24320 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-12-18T12:04:31.448-06:00  INFO 24320 --- [http-nio-8080-exec-2] o.l.A.A.c.AssetUploadController          : Received asset notification: {"id":"dbee0e42-688a-4b31-b572-a3d9da443b04","webhookId":"0206f5cf-cbbb-4ca8-8f88-a3c45bf8a1b2","createdAt":1702889596336,"timestamp":1702889597640,"event":"asset.ready","payload":{"id":"09ee192e-20d9-480e-a3fd-feba453554fa","snapshot":{}}} 
+2023-12-18T12:04:32.374-06:00  INFO 24320 --- [http-nio-8080-exec-2] o.l.A.A.c.AssetUploadController          : videoMetadata: Source(hrn=MP4, type=html5/video/mp4, url=https://vod-cdn.lp-playback.studio/raw/jxf4iblf6wlsyor6526t4tcmtmqa/catalyst-vod-com/hls/09ee1iihioqf4zon/360p0.mp4, size=2191367, width=640, height=360, bitrate=119245)
+2023-12-18T12:04:32.377-06:00  INFO 24320 --- [http-nio-8080-exec-2] o.l.A.A.c.AssetUploadController          : PlaybackId:VideoMetadata(type=vod, meta=Meta(playbackPolicy=null, source=[Source(hrn=MP4, type=html5/video/mp4, url=https://vod-cdn.lp-playback.studio/raw/jxf4iblf6wlsyor6526t4tcmtmqa/catalyst-vod-com/hls/09ee1iihioqf4zon/360p0.mp4, size=2191367, width=640, height=360, bitrate=119245), Source(hrn=HLS (TS), type=html5/application/vnd.apple.mpegurl, url=https://vod-cdn.lp-playback.studio/raw/jxf4iblf6wlsyor6526t4tcmtmqa/catalyst-vod-com/hls/09ee1iihioqf4zon/index.m3u8, size=null, width=null, height=null, bitrate=null), Source(hrn=Thumbnails, type=text/vtt, url=https://vod-cdn.lp-playback.studio/raw/jxf4iblf6wlsyor6526t4tcmtmqa/catalyst-vod-com/hls/09ee1iihioqf4zon/thumbnails/thumbnails.vtt, size=null, width=null, height=null, bitrate=null)])) 
+2023-12-18T12:05:25.839-06:00  INFO 29308 --- [main] o.l.A.A.AssetUploadApplication           : Starting AssetUploadApplication using Java 20.0.1 with PID 29308 (C:\orb\AssetUpload\AssetUpload\target\classes started by Prajyot Karnik in C:\orb\AssetUpload\AssetUpload)
+2023-12-18T12:05:25.843-06:00  INFO 29308 --- [main] o.l.A.A.AssetUploadApplication           : No active profile set, falling back to 1 default profile: "default"
+2023-12-18T12:05:27.067-06:00  INFO 29308 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2023-12-18T12:05:27.077-06:00  INFO 29308 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-18T12:05:27.077-06:00  INFO 29308 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-18T12:05:27.139-06:00  INFO 29308 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-18T12:05:27.139-06:00  INFO 29308 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1229 ms
+2023-12-18T12:05:27.575-06:00  INFO 29308 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2023-12-18T12:05:27.583-06:00  INFO 29308 --- [main] o.l.A.A.AssetUploadApplication           : Started AssetUploadApplication in 2.386 seconds (process running for 2.822)
+2023-12-18T12:05:34.092-06:00  INFO 29308 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-18T12:05:34.092-06:00  INFO 29308 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-12-18T12:05:34.093-06:00  INFO 29308 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-12-18T12:05:34.134-06:00  INFO 29308 --- [http-nio-8080-exec-2] o.l.A.A.c.AssetUploadController          : Received asset notification: {"id":"dbee0e42-688a-4b31-b572-a3d9da443b04","webhookId":"0206f5cf-cbbb-4ca8-8f88-a3c45bf8a1b2","createdAt":1702889596336,"timestamp":1702889597640,"event":"asset.ready","payload":{"id":"09ee192e-20d9-480e-a3fd-feba453554fa","snapshot":{}}} 
+2023-12-18T12:05:35.123-06:00  INFO 29308 --- [http-nio-8080-exec-2] o.l.A.A.c.AssetUploadController          : videoMetadata: Source(hrn=MP4, type=html5/video/mp4, url=https://vod-cdn.lp-playback.studio/raw/jxf4iblf6wlsyor6526t4tcmtmqa/catalyst-vod-com/hls/09ee1iihioqf4zon/360p0.mp4, size=2191367, width=640, height=360, bitrate=119245)
+2023-12-18T12:05:35.125-06:00  INFO 29308 --- [http-nio-8080-exec-2] o.l.A.A.c.AssetUploadController          : PlaybackId:VideoMetadata(type=vod, meta=Meta(playbackPolicy=null, source=[Source(hrn=MP4, type=html5/video/mp4, url=https://vod-cdn.lp-playback.studio/raw/jxf4iblf6wlsyor6526t4tcmtmqa/catalyst-vod-com/hls/09ee1iihioqf4zon/360p0.mp4, size=2191367, width=640, height=360, bitrate=119245), Source(hrn=HLS (TS), type=html5/application/vnd.apple.mpegurl, url=https://vod-cdn.lp-playback.studio/raw/jxf4iblf6wlsyor6526t4tcmtmqa/catalyst-vod-com/hls/09ee1iihioqf4zon/index.m3u8, size=null, width=null, height=null, bitrate=null), Source(hrn=Thumbnails, type=text/vtt, url=https://vod-cdn.lp-playback.studio/raw/jxf4iblf6wlsyor6526t4tcmtmqa/catalyst-vod-com/hls/09ee1iihioqf4zon/thumbnails/thumbnails.vtt, size=null, width=null, height=null, bitrate=null)])) 
+2023-12-18T12:22:13.708-06:00  INFO 29652 --- [main] o.l.A.A.AssetUploadApplication           : Starting AssetUploadApplication using Java 20.0.1 with PID 29652 (C:\orb\AssetUpload\AssetUpload\target\classes started by Prajyot Karnik in C:\orb\AssetUpload\AssetUpload)
+2023-12-18T12:22:13.711-06:00  INFO 29652 --- [main] o.l.A.A.AssetUploadApplication           : No active profile set, falling back to 1 default profile: "default"
+2023-12-18T12:22:14.966-06:00  INFO 29652 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2023-12-18T12:22:14.975-06:00  INFO 29652 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-18T12:22:14.975-06:00  INFO 29652 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-18T12:22:15.038-06:00  INFO 29652 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-18T12:22:15.038-06:00  INFO 29652 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1254 ms
+2023-12-18T12:22:15.479-06:00  INFO 29652 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2023-12-18T12:22:15.486-06:00  INFO 29652 --- [main] o.l.A.A.AssetUploadApplication           : Started AssetUploadApplication in 2.329 seconds (process running for 2.758)
+2023-12-18T12:22:25.223-06:00  INFO 29652 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-18T12:22:25.223-06:00  INFO 29652 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-12-18T12:22:25.224-06:00  INFO 29652 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-12-18T12:22:25.266-06:00  INFO 29652 --- [http-nio-8080-exec-1] o.l.A.A.c.AssetUploadController          : Received asset notification: {"id":"dbee0e42-688a-4b31-b572-a3d9da443b04","webhookId":"0206f5cf-cbbb-4ca8-8f88-a3c45bf8a1b2","createdAt":1702889596336,"timestamp":1702889597640,"event":"asset.ready","payload":{"id":"09ee192e-20d9-480e-a3fd-feba453554fa","snapshot":{}}} 
+2023-12-18T12:22:26.651-06:00  INFO 29652 --- [http-nio-8080-exec-1] o.l.A.A.c.AssetUploadController          : videoMetadata: {MP4=https://vod-cdn.lp-playback.studio/raw/jxf4iblf6wlsyor6526t4tcmtmqa/catalyst-vod-com/hls/09ee1iihioqf4zon/360p0.mp4, HLS (TS)=https://vod-cdn.lp-playback.studio/raw/jxf4iblf6wlsyor6526t4tcmtmqa/catalyst-vod-com/hls/09ee1iihioqf4zon/index.m3u8, Thumbnails=https://vod-cdn.lp-playback.studio/raw/jxf4iblf6wlsyor6526t4tcmtmqa/catalyst-vod-com/hls/09ee1iihioqf4zon/thumbnails/thumbnails.vtt}
+2023-12-18T12:22:26.651-06:00  INFO 29652 --- [http-nio-8080-exec-1] o.l.A.A.c.AssetUploadController          : PlaybackId:VideoMetadata(type=vod, meta=Meta(playbackPolicy=null, source=[Source(hrn=MP4, type=html5/video/mp4, url=https://vod-cdn.lp-playback.studio/raw/jxf4iblf6wlsyor6526t4tcmtmqa/catalyst-vod-com/hls/09ee1iihioqf4zon/360p0.mp4, size=2191367, width=640, height=360, bitrate=119245), Source(hrn=HLS (TS), type=html5/application/vnd.apple.mpegurl, url=https://vod-cdn.lp-playback.studio/raw/jxf4iblf6wlsyor6526t4tcmtmqa/catalyst-vod-com/hls/09ee1iihioqf4zon/index.m3u8, size=null, width=null, height=null, bitrate=null), Source(hrn=Thumbnails, type=text/vtt, url=https://vod-cdn.lp-playback.studio/raw/jxf4iblf6wlsyor6526t4tcmtmqa/catalyst-vod-com/hls/09ee1iihioqf4zon/thumbnails/thumbnails.vtt, size=null, width=null, height=null, bitrate=null)])) 
+2023-12-18T15:24:55.701-06:00  INFO 27752 --- [main] o.l.A.A.AssetUploadApplication           : Starting AssetUploadApplication using Java 20.0.1 with PID 27752 (C:\orb\AssetUpload\AssetUpload\target\classes started by Prajyot Karnik in C:\orb\AssetUpload\AssetUpload)
+2023-12-18T15:24:55.707-06:00  INFO 27752 --- [main] o.l.A.A.AssetUploadApplication           : No active profile set, falling back to 1 default profile: "default"
+2023-12-18T15:24:57.165-06:00  INFO 27752 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2023-12-18T15:24:57.179-06:00  INFO 27752 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-18T15:24:57.180-06:00  INFO 27752 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-18T15:24:57.268-06:00  INFO 27752 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-18T15:24:57.269-06:00  INFO 27752 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1468 ms
+2023-12-18T15:24:57.824-06:00  INFO 27752 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2023-12-18T15:24:57.835-06:00  INFO 27752 --- [main] o.l.A.A.AssetUploadApplication           : Started AssetUploadApplication in 2.921 seconds (process running for 3.552)
