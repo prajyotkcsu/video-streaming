@@ -39,16 +39,32 @@ public class VideoMetadata {
     private Meta meta;
 
     public PlaybackDetails extractVideoList(VideoMetadata videoMetadata) throws IOException {
-
+        log.info("Fetching video thumbnails....");
+        PlaybackDetails playbackDetails=new PlaybackDetails();
         List<Source> sourceList=videoMetadata.getMeta().getSource();
+        log.info("sourceList:{} ",sourceList);
+        for(Source source: sourceList){
+            if(source.getUrl().endsWith(".mp4")){
+                log.info("inside mp4");
+                playbackDetails.setMp4URL(source.getUrl());}
+            else if(source.getUrl().endsWith(".m3u8")){
+                log.info("inside m3u8");
+                playbackDetails.setPlaybackURL(source.getUrl());}
+            else if(source.getUrl().endsWith(".vtt")){
+                log.info("inside vtt");
+                playbackDetails.setVttURL(source.getUrl());}
+        }
         VttReader vttReader=new VttReader();
-        List<String> thumbNails =vttReader.convertVttToJPEG(sourceList.get(2).getUrl());
-        log.info("thumbNails********{}",thumbNails.toString());
-        return PlaybackDetails.builder()
-                .mp4URL(sourceList.get(0).getUrl())
-                .playbackURL(sourceList.get(1).getUrl())
-                .thumbNails(thumbNails)
-                .build();
+        log.info("New video");
+        List<String> thumbNails;
+        if(playbackDetails.getVttURL()!=null){
+            thumbNails =vttReader.convertVttToJPEG(playbackDetails.getVttURL());
+            playbackDetails.setThumbNails(thumbNails);
+        }
+        else
+            playbackDetails.setThumbNails(null);
+        log.info("***thumbNails produced***");
+        return playbackDetails;
     }
 }
 

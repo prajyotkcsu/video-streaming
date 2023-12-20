@@ -1,14 +1,18 @@
 package orb.livepeer.AssetUploadListner.AssetUpload.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 @Data
 @Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class PlaybackDetails {
     private String playbackURL;
     private String mp4URL;
+    private String vttURL;
     private List<String> thumbNails;
-    private String transcodingStatus;
 }

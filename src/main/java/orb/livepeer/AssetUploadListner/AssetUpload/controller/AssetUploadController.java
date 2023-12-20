@@ -7,7 +7,9 @@ import lombok.extern.slf4j.Slf4j;
 import orb.livepeer.AssetUploadListner.AssetUpload.model.AssetDetails;
 import orb.livepeer.AssetUploadListner.AssetUpload.model.PlaybackDetails;
 import orb.livepeer.AssetUploadListner.AssetUpload.model.UploadDetails;
+import orb.livepeer.AssetUploadListner.AssetUpload.service.AssetRepository;
 import orb.livepeer.AssetUploadListner.AssetUpload.video.VideoMetadata;
+import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
@@ -19,6 +21,7 @@ import org.springframework.web.client.RestTemplate;
 
 import java.io.IOException;
 import java.util.Map;
+import java.util.UUID;
 
 import static orb.livepeer.AssetUploadListner.AssetUpload.controller.JsonParserWithObjectMapper.*;
 
@@ -27,44 +30,51 @@ import static orb.livepeer.AssetUploadListner.AssetUpload.controller.JsonParserW
 public class AssetUploadController {
     @Autowired
     private RestTemplate restTemplate;
-    @GetMapping("/")
-    public String greet(){
-        log.info("Into the void again");
-        return "Hello PK updated";
-    }
-    @GetMapping("/publish/asset-upload")
-    public String assetUpload(){
-        log.info("New video uploaded!!");
-        return "Asset has been uploaded!! Check it out";
-    }
-
-
+    @Autowired
+    private AssetRepository assetRepository;
     @PostMapping("/asset-ready")
     public ResponseEntity<UploadDetails> assetReadyNotification(@RequestBody String assetNotification) throws IOException {
         log.info("Received asset notification:{} ", assetNotification);
-        //if id present, possibly asset.ready
-        //update MongoDb with id, playbackId, thumbNail, mp4Link,
         ObjectMapper objectMapper = new ObjectMapper();
         AssetDetails assetDetails = null;
-        PlaybackDetails playbackDetails=null;
+        PlaybackDetails playbackDetails = null;
+        UploadDetails uploadDetails=null;
         // Parse the JSON string into a JsonNode
         String eventType = objectMapper.readTree(assetNotification).get("event").asText();
 
         if (eventType.equals("asset.created")) {
+            log.info("Asset uploading........");
             assetDetails = extractAssetDetails(assetNotification);
             log.info("PlaybackId:{} ", assetDetails);
+            assert assetDetails != null;
+            ObjectId objectId = new ObjectId();
+            assetRepository.save(new UploadDetails(UUID.randomUUID().toString(),assetDetails.getAssetId(),assetDetails.getPlaybackId()));
+            log.info("Transcoding in progress........");
         } else if (eventType.equals("asset.ready")) {
-            VideoMetadata videoMetadata=restTemplate.exchange("https://livepeer.studio/api/playback/09ee1iihioqf4zon", HttpMethod.GET,null, VideoMetadata.class).getBody();
+            log.info("Asset uploaded{}",assetNotification);
+            String assetId=objectMapper.readTree(assetNotification).get("payload").get("id").asText();
+            UploadDetails asset=assetRepository.findByAssetId(assetId);
+            log.info("Fetching video details......");
+            VideoMetadata videoMetadata = restTemplate.exchange("https://livepeer.studio/api/playback/"+asset.getPlaybackId(), HttpMethod.GET, null, VideoMetadata.class).getBody();
             assert videoMetadata != null;
-            playbackDetails=videoMetadata.extractVideoList(videoMetadata);
+            playbackDetails = videoMetadata.extractVideoList(videoMetadata);
+            uploadDetails = UploadDetails.builder()
+                    .id(asset.getId())
+                    .assetId(asset.getAssetId())
+                    .livepeer(true)
+                    .playbackId(asset.getPlaybackId())
+                    .mp4URL(playbackDetails.getMp4URL())
+                    .playbackURL(playbackDetails.getPlaybackURL())
+                    .thumbNails(playbackDetails.getThumbNails())
+                    .transcodingCompleted(true)
+                    .timestamp(System.currentTimeMillis())
+                    .build();
+            log.info("Asset uploaded!!!");
+            log.info("Upload Details: {}",uploadDetails);
+            assetRepository.save(uploadDetails);
         }
-        UploadDetails uploadDetails=UploadDetails.builder()
-                .assetDetails(assetDetails)
-                .playbackDetails(playbackDetails)
-                .transcodingStatus(true)
-                .build();
-        log.info("Asset uploaded successfully:{}",uploadDetails);
-        return ResponseEntity.ok(uploadDetails);
+
+    return ResponseEntity.ok(uploadDetails);
     }
 }
 

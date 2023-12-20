@@ -14,6 +14,7 @@ import java.util.List;
 public class VttReader {
 
     public static List<String> convertVttToJPEG(String vttFilePath) throws IOException {
+        log.info("Converting vtt to images....");
         List<String> records = new ArrayList<>();
         URL urlObject = new URL(vttFilePath);
         String domain=vttFilePath.substring(0,vttFilePath.lastIndexOf('/'));
