@@ -5,14 +5,16 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
 @Data
-@Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class PlaybackDetails {
-    private String playbackURL;
-    private List<MP4> source;
-    private String vttURL;
-    private List<Thumbnail> thumbnails;
+@Builder
+public class MP4 {
+    private String hrn;
+    private String type;
+    private String url;
+    private long size;
+    private long width;
+    private long height;
+    private long bitrate;
 }

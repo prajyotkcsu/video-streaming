@@ -22,8 +22,8 @@ public class UploadDetails {
     private boolean livepeer;
     private String playbackId;
     private String playbackURL;
-    private String mp4URL;
-    private List<String> thumbNails;
+    private List<MP4> source;
+    private List<Thumbnail> thumbnails;
     private boolean transcodingCompleted;
     private long timestamp;
 

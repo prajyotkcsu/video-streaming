@@ -41,7 +41,7 @@ public class AssetUploadController {
         UploadDetails uploadDetails=null;
         // Parse the JSON string into a JsonNode
         String eventType = objectMapper.readTree(assetNotification).get("event").asText();
-
+        UploadDetails asset = null;
         if (eventType.equals("asset.created")) {
             log.info("Asset uploading........");
             assetDetails = extractAssetDetails(assetNotification);
@@ -53,28 +53,23 @@ public class AssetUploadController {
         } else if (eventType.equals("asset.ready")) {
             log.info("Asset uploaded{}",assetNotification);
             String assetId=objectMapper.readTree(assetNotification).get("payload").get("id").asText();
-            UploadDetails asset=assetRepository.findByAssetId(assetId);
+            asset=assetRepository.findByAssetId(assetId);
+            asset.setPlaybackId("09ee1iihioqf4zon");//TODO
             log.info("Fetching video details......");
             VideoMetadata videoMetadata = restTemplate.exchange("https://livepeer.studio/api/playback/"+asset.getPlaybackId(), HttpMethod.GET, null, VideoMetadata.class).getBody();
             assert videoMetadata != null;
             playbackDetails = videoMetadata.extractVideoList(videoMetadata);
-            uploadDetails = UploadDetails.builder()
-                    .id(asset.getId())
-                    .assetId(asset.getAssetId())
-                    .livepeer(true)
-                    .playbackId(asset.getPlaybackId())
-                    .mp4URL(playbackDetails.getMp4URL())
-                    .playbackURL(playbackDetails.getPlaybackURL())
-                    .thumbNails(playbackDetails.getThumbNails())
-                    .transcodingCompleted(true)
-                    .timestamp(System.currentTimeMillis())
-                    .build();
+            asset.setSource(playbackDetails.getSource());
+            asset.setPlaybackURL(playbackDetails.getPlaybackURL());
+            asset.setThumbnails(playbackDetails.getThumbnails());
+            asset.setTranscodingCompleted(true);
+            asset.setTimestamp(System.currentTimeMillis());
+            log.info("Asset ready: {}",asset);
+            assetRepository.save(asset);
             log.info("Asset uploaded!!!");
-            log.info("Upload Details: {}",uploadDetails);
-            assetRepository.save(uploadDetails);
         }
 
-    return ResponseEntity.ok(uploadDetails);
+    return ResponseEntity.ok(asset);
     }
 }
 
