@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
 
 import java.util.List;
 
@@ -17,19 +18,16 @@ import java.util.List;
 @Document(collection = "upload-video")
 public class UploadDetails {
     @Id
-    private String id;
+    @Field("_id")
+    private ObjectId id;
+    private String cid;
     private String assetId;
     private boolean livepeer;
     private String playbackId;
+    private long timeModified;
+
     private String playbackURL;
     private List<MP4> source;
     private List<Thumbnail> thumbnails;
     private boolean transcodingCompleted;
-    private long timestamp;
-
-    public UploadDetails(String id,String assetId, String playbackId) {
-        this.id = id;
-        this.assetId = assetId;
-        this.playbackId = playbackId;
-    }
 }

@@ -11,6 +11,10 @@ import orb.livepeer.AssetUploadListner.AssetUpload.service.AssetRepository;
 import orb.livepeer.AssetUploadListner.AssetUpload.video.VideoMetadata;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.data.mongodb.core.query.Criteria;
+import org.springframework.data.mongodb.repository.Query;
+import org.springframework.data.mongodb.repository.Update;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -24,6 +28,7 @@ import java.util.Map;
 import java.util.UUID;
 
 import static orb.livepeer.AssetUploadListner.AssetUpload.controller.JsonParserWithObjectMapper.*;
+import static org.springframework.data.mongodb.repository.Query.*;
 
 @RestController
 @Slf4j
@@ -32,6 +37,8 @@ public class AssetUploadController {
     private RestTemplate restTemplate;
     @Autowired
     private AssetRepository assetRepository;
+    @Autowired
+    private MongoTemplate mongoTemplate;
     @PostMapping("/asset-ready")
     public ResponseEntity<UploadDetails> assetReadyNotification(@RequestBody String assetNotification) throws IOException {
         log.info("Received asset notification:{} ", assetNotification);
@@ -40,31 +47,27 @@ public class AssetUploadController {
         PlaybackDetails playbackDetails = null;
         UploadDetails uploadDetails=null;
         // Parse the JSON string into a JsonNode
+
         String eventType = objectMapper.readTree(assetNotification).get("event").asText();
         UploadDetails asset = null;
-        if (eventType.equals("asset.created")) {
-            log.info("Asset uploading........");
-            assetDetails = extractAssetDetails(assetNotification);
-            log.info("PlaybackId:{} ", assetDetails);
-            assert assetDetails != null;
-            ObjectId objectId = new ObjectId();
-            assetRepository.save(new UploadDetails(UUID.randomUUID().toString(),assetDetails.getAssetId(),assetDetails.getPlaybackId()));
-            log.info("Transcoding in progress........");
-        } else if (eventType.equals("asset.ready")) {
-            log.info("Asset uploaded{}",assetNotification);
-            String assetId=objectMapper.readTree(assetNotification).get("payload").get("id").asText();
-            asset=assetRepository.findByAssetId(assetId);
-            asset.setPlaybackId("09ee1iihioqf4zon");//TODO
+        if (eventType.equals("asset.ready")) {
+            log.info("Asset uploaded{}", assetNotification);
+            String assetId = objectMapper.readTree(assetNotification).get("payload").get("id").asText();
+            asset = assetRepository.findByAssetId(assetId);
+            if(asset==null){
+                System.out.println("Asset not found");
+                return null;
+            }
             log.info("Fetching video details......");
-            VideoMetadata videoMetadata = restTemplate.exchange("https://livepeer.studio/api/playback/"+asset.getPlaybackId(), HttpMethod.GET, null, VideoMetadata.class).getBody();
+            VideoMetadata videoMetadata = restTemplate.exchange("https://livepeer.studio/api/playback/" + asset.getPlaybackId(), HttpMethod.GET, null, VideoMetadata.class).getBody();
             assert videoMetadata != null;
             playbackDetails = videoMetadata.extractVideoList(videoMetadata);
             asset.setSource(playbackDetails.getSource());
             asset.setPlaybackURL(playbackDetails.getPlaybackURL());
             asset.setThumbnails(playbackDetails.getThumbnails());
             asset.setTranscodingCompleted(true);
-            asset.setTimestamp(System.currentTimeMillis());
-            log.info("Asset ready: {}",asset);
+            asset.setTimeModified(System.currentTimeMillis());
+            log.info("Asset ready: {}", asset);
             assetRepository.save(asset);
             log.info("Asset uploaded!!!");
         }
@@ -72,4 +75,3 @@ public class AssetUploadController {
     return ResponseEntity.ok(asset);
     }
 }
-
